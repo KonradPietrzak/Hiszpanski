@@ -1,0 +1,75 @@
+<!-- Wyświetlanie hover po wciśnieciu
+.hover {
+  background-color: #ccc;
+}
+div {
+  background-color: #eee;
+  padding: 10px;
+  cursor: pointer;
+}
+
+div:hover {
+  background-color: #ccc;
+}
+var div = document.querySelector("div");
+
+div.addEventListener("click", function() {
+  div.classList.toggle("hover");
+}); -->
+<!-- Ogarnij co to jest:
+<div id="div1">Mi nueva casa!</div>        
+<div id="div2">Mój nowy dom!</div>
+.highlight {
+    background-color: yellow;
+}
+#tabela
+{
+    display:flex;
+}
+const div1 = document.getElementById("div1");
+const div2 = document.getElementById("div2");
+
+div1.addEventListener("mouseover", function() {
+  div2.classList.add("highlight");
+});
+
+div1.addEventListener("mouseout", function() {
+  div2.classList.remove("highlight");
+});
+
+var etykieta = document.getElementById("moja-etykieta");
+var tekstEtykiety = etykieta.innerHTML;
+console.log(tekstEtykiety); -->
+<!-- Wyświetlanie hover po najechaniu na niego
+<div class="hover-div">
+            <p>comer</p>
+            <div class="hover-content">
+              <p>jeść</p>
+            </div>
+          </div>
+
+.hover-div {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    padding: 20px;
+}
+
+.hover-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: lightgreen;
+    padding: 20px;
+}
+
+.hover-div:hover .hover-content {
+    display: block;
+}
+const input = document.querySelector('input');
+
+input.addEventListener('input', function () {
+  console.log(input.value);
+}); -->

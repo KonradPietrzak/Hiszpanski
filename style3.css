@@ -1,0 +1,80 @@
+#container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#nagłówek {
+    background-color: blueviolet;
+    font-size: 200%;
+    text-align: center;
+
+}
+
+#tabela {
+    background-color: brown;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#tabela1 {
+    background-color: red;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+}
+
+#formatmenu {
+    border: 1px solid black;
+    background-color: aqua;
+    display: inline-block;
+    width: 25%;
+    font-size: 20px;
+}
+
+#wyświetlane {
+    background-color: grey;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#lewa {
+    border: 1px solid black;
+    display: inline-block;
+}
+
+#prawa {
+    border: 1px solid yellowgreen;
+    display: inline-block;
+}
+.hover-div{
+    position: relative;
+}
+.hover-content {
+    display: none;
+    background-color: lightgreen;
+    padding: 20px;
+}
+
+.hover-div.active .hover-content {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+
+}
+
+.highlight {
+    background-color: yellow;
+}
+button{
+    border: none;
+    background-color: grey;
+}
