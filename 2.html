@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lista słów</title>
+    <style>
+      /* Styl podświetlonego diva */
+      .highlight {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Div dla słów w języku hiszpańskim -->
+    <div id="spanish-container">
+      <!-- Tutaj wyświetlimy słowa w języku hiszpańskim -->
+    </div>
+
+    <!-- Div dla słów w języku polskim -->
+    <div id="polish-container">
+      <!-- Tutaj wyświetlimy słowa w języku polskim -->
+    </div>
+
+    <script>
+      // Funkcja do generowania listy słów z tekstu
+      function generateWordList(text) {
+        const words = text.replace(/[.,!?]/g, "").split(" ");
+        return words;
+      }
+
+      // Teksty w języku hiszpańskim i polskim
+      const spanishText = "mi (nueva) casa";
+      const polishText = "Mój nowy dom";
+
+      // Generujemy listy słów
+      const spanishWords = generateWordList(spanishText);
+      const polishWords = generateWordList(polishText);
+
+      // Sprawdzamy, która lista jest krótsza
+      const shorterListLength = Math.min(
+        spanishWords.length,
+        polishWords.length
+      );
+
+      // Div dla słów w języku hiszpańskim
+      const spanishContainer = document.getElementById("spanish-container");
+      for (let i = 0; i < shorterListLength; i++) {
+        const div = document.createElement("div");
+        div.textContent = spanishWords[i];
+        div.id = `word-${i}`; // Dodajemy odpowiednie id
+
+        // Dodajemy obsługę zdarzenia najechania myszą
+        div.addEventListener("mouseover", () => {
+          const correspondingDiv = document.getElementById(`word-${i}`);
+          correspondingDiv.classList.add("highlight");
+        });
+
+        // Dodajemy obsługę zdarzenia zjechania myszą
+        div.addEventListener("mouseout", () => {
+          const correspondingDiv = document.getElementById(`word-${i}`);
+          correspondingDiv.classList.remove("highlight");
+        });
+
+        spanishContainer.appendChild(div);
+      }
+
+      // Div dla słów w języku polskim
+      const polishContainer = document.getElementById("polish-container");
+      for (let i = 0; i < shorterListLength; i++) {
+        const div = document.createElement("div");
+        div.textContent = polishWords[i];
+        div.id = `word-${i}`; // Dodajemy odpowiednie id
+
+        polishContainer.appendChild(div);
+      }
+    </script>
+  </body>
+</html>

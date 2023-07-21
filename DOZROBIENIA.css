@@ -44,34 +44,37 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
 #lewa {
     border: 1px solid black;
     display: inline-block;
 }
 
 #prawa {
-    border: 1px solid black;
+    border: 1px solid yellowgreen;
     display: inline-block;
 }
-.highlight {
-    background-color: yellow;
-}
-.hover-div {
+.hover-div{
     position: relative;
-    width: 200px;
-    height: 100px;
-    background-color: lightblue;
-    padding: 20px;
 }
-
 .hover-content {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
     background-color: lightgreen;
     padding: 20px;
 }
-.hover-div:hover .hover-content {
+
+.hover-div.active .hover-content {
     display: block;
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+
+}
+
+.highlight {
+    background-color: yellow;
+}
+button{
+    border: none;
+    background-color: grey;
 }
