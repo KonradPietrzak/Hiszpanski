@@ -10,7 +10,6 @@
     background-color: blueviolet;
     font-size: 200%;
     text-align: center;
-
 }
 
 #tabela {
@@ -45,18 +44,20 @@
     grid-template-columns: 1fr 1fr;
 }
 
-#lewa {
+#lewy {
     border: 1px solid black;
     display: inline-block;
 }
 
-#prawa {
+#prawy {
     border: 1px solid yellowgreen;
     display: inline-block;
 }
-.hover-div{
+
+.hover-div {
     position: relative;
 }
+
 .hover-content {
     display: none;
     background-color: lightgreen;
@@ -68,13 +69,13 @@
     position: absolute;
     right: 0;
     bottom: 100%;
-
 }
 
 .highlight {
     background-color: yellow;
 }
-button{
+
+button {
     border: none;
     background-color: grey;
 }
